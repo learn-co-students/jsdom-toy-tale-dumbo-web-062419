@@ -47,6 +47,16 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Deku",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51yF%2BM4TGlL._SX425_.jpg",
+      "id": 9
+    },
+    {
+      "name": "todoroki",
+      "image": "https://media.archonia.com/images/samples/29/88/312988_s0.jpg",
+      "id": 10
     }
   ]
 }
