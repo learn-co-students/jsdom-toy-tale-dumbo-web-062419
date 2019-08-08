@@ -27,10 +27,41 @@ document.addEventListener("DOMContentLoaded", function(){
   const form = document.querySelector('.add-toy-form')
   form.addEventListener("submit", function(event){
     event.preventDefault()
-    event.target.reset()
 
     const newToyName = event.target.name.value;
-    console.log(event.target.name.value)
+    console.log(newToyName)
+    const newToyImage = event.target.image.value;
+    console.log(newToyImage)
+
+    event.target.reset()
+
+    fetch("http://localhost:3000/toys", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: newToyName,
+        image: newToyImage,
+        likes: 0
+      })
+    }).then(res => res.json())
+    .then(slapOneToyToTheDom)
+
+    fetch("http://localhost:3000/toys/:id", {
+      method: "PATCH",
+      headers:
+      {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+
+      body:
+      {
+        "likes": <new number>
+      }
+    })
+
   })
 
 
@@ -44,7 +75,7 @@ function slapToysToTheDom(toys){
 function slapOneToyToTheDom(oneItem){
   const toyCollection = document.getElementById('toy-collection');
   const div = document.createElement("div");
-  console.log(oneItem.name)
+  // console.log(oneItem.name)
   div.className = "card"
 
   div.innerHTML = `
@@ -53,7 +84,7 @@ function slapOneToyToTheDom(oneItem){
     <p> ${oneItem.likes} Likes </p>
     <button class="like-btn"> Like <3 </button>
 `
- toyCollection.append(div)
+  toyCollection.append(div)
 
 }
 
