@@ -15,30 +15,50 @@ function listSingleToy(toy){
   newDiv.innerHTML = `
   <h2>${toy.name}</h2>
   <img src=${toy.image} class="toy-avatar" />
-  <p>likes:${toy.likes}</p>
+  <p>likes:</p>
+  <p id="toy-${toy.id}">${toy.likes}</p>
   <button class="like-btn">Like <3</button>
   `
-  toyCollection.append(newDiv);
-  const likeBtn = newDiv.lastElementChild
 
-  likeBtn.addEventListener('click', function(){
-    const allLikes = document.querySelectorAll('p')
-    let likeContent = allLikes[toy.id]
-    let currentLikes = toy.likes;
-    let newLikes = currentLikes += 1;
+  const likeBtn = newDiv.querySelector('button')
+  // console.log(likeBtn)
+  const numOflikes = newDiv.querySelector('p')
+  // console.log(numOflikes)
+  likeBtn.dataset.id = toy.id
+  numOflikes.dataset.id = toy.id
 
-    fetch(`http://localhost:3000/toys/${toy.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        likes: newLikes
-      })
-    }).then(response => response.json())
-      .then(likeContent.innerText = `likes:${newLikes}`)
-  })
   
+  
+
+  likeBtn.addEventListener('click', addLikes)
+
+  toyCollection.append(newDiv);
+}
+
+function addLikes(event){
+
+  const id = event.target.dataset.id
+  const likes = document.getElementById(`toy-${id}`)
+  let currentLikes = likes.textContent
+  let newLikes = parseInt(currentLikes, 10) + 1
+  
+
+  fetch(`http://localhost:3000/toys/${id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "applicatin/json"
+    },
+    body: JSON.stringify({
+      likes: newLikes
+    })
+  }).then(response => response.json())
+    .then(updateLikes)
+}
+
+function updateLikes(toy){
+  let likeContent = document.getElementById(`toy-${toy.id}`)
+  likeContent.innerText = `${toy.likes}`
 }
 
 
