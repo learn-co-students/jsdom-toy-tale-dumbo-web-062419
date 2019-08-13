@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 18
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 14
     },
     {
       "id": 3,
@@ -47,6 +47,84 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 17
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 19
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 20
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 21
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 22
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 23
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 24
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 0,
+      "id": 25
+    },
+    {
+      "name": "temmie",
+      "image": "https://i.redd.it/2r9f6bwmyqa01.jpg",
+      "likes": 15,
+      "id": 26
     }
   ]
 }
